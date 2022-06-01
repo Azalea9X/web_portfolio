@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Hello world!!!*/
+
+body {
+	background-color: burlywood !important;
+}
