@@ -3,3 +3,4 @@
 /projects/backend_practice/**/node_modules/*.*
 /projects/backend_practice/**/node_modules/**
 /projects/backend_practice/**/node_modules/*
+projects/backend_practice/**/node_modules/**/*.*
