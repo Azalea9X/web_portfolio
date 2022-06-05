@@ -10,3 +10,4 @@ projects/backend_practice/**/node_modules/**/*.*
 /css/tailwind/node_modules/*
 /css/tailwind/node_modules/**/*.*
 /css/tailwind/node_modules/*.*
+/css/tailwind/node_modules
