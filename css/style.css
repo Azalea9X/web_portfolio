@@ -1,0 +1,13 @@
+main{
+    background-image: url("../front_end/img2/transparent_background.png") !important;
+    box-sizing: content-box; 
+    background-cover: contain;
+    width: 100%;
+    margin: 0; 
+    padding: 0;
+}
+
+main *:not(img) {
+    margin-left: 10px;
+}
+

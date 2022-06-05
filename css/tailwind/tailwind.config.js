@@ -6,7 +6,7 @@ module.exports = {
   important: true,
   prefix: 'tw-',
   
-  content: ["./*.{html,js}"],
+  content: ["./../../front_end/**/HTML/*.{html,js}"],
     theme: {
       extend: { 
         inset: {
@@ -582,8 +582,6 @@ magenta: {
     }
   }, 
   plugins: [
-    require('cssnano')({
-        preset: 'default'}),
         require('tailwindcss'), 
         require('autoprefixer'),
         

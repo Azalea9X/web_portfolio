@@ -1,6 +1,12 @@
-
+/front*/fict*/HTML/node_modules/*
+/front*/fict*/HTML/node_modules/*.*
+/front*/fict*/HTML/node_modules/**/*.*
+/front*/fict*/HTML/node_modules/**/*
 /projects/backend_practice/**/node_modules/
 /projects/backend_practice/**/node_modules/*.*
 /projects/backend_practice/**/node_modules/**
 /projects/backend_practice/**/node_modules/*
 projects/backend_practice/**/node_modules/**/*.*
+/css/tailwind/node_modules/*
+/css/tailwind/node_modules/**/*.*
+/css/tailwind/node_modules/*.*
