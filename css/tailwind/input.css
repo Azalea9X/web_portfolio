@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer utilities {
+@responsive {
+    h1 {
+        
+    }
+
+}
+
+@layer components {
+    .button{
+
+
+    }
+
+    .card-sm{
+  width: 200px !important; 
+  height: 200px !important;
+
+    }
+
+    .card-md{
+  width: 500px; 
+  height: 500px !important;
+  border: 2px solid black !important; 
+  background-color: black !important; 
+  color: white !important; 
+
+    }
+
+    .card-lg{
+        width: 800px !important; 
+        height: 800px !important;
+      
+          }
+
+          .card-xl{
+            width: 1200px !important; 
+            height: 1200px !important;
+          
+              }
+              .card-2xl{
+                width: 1600px !important; 
+                height: 1600px !important;
+              
+                  }
+
+    .menu {
+
+    }
+
+    .links{
+
+    }
+
+
+}
+
+/*Not responsive*/                   
+
+}
