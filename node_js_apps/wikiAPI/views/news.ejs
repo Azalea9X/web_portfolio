@@ -15,13 +15,14 @@
     </head>
 
     <body>
+<!--Played around with this example on stack overflow https://stackoverflow.com/questions/49264980/how-do-you-do-a-for-loop-for-each-in-ejs-->
 
-        <h2>
-            <%=title%>
-        </h2>
-        <%=content%>
-            </p>
-            <H3><a href="../../">Back to the homepage</a></H3>
+        <% for(var i = 0; i < 5; i++) {%>
+            <h2><%= articles[i].title %></h2>
+            <div><%= articles[i].content[i] %><br></div>
+            <% } %>
+            <a href="./home">Back to home</a>
+            <h2>Want to see more posts?</h2>
     </body>
 
     </html>
