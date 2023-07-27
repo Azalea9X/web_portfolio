@@ -4,11 +4,7 @@ html {
 
 /*https://stackoverflow.com/questions/5196583/target-elements-with-multiple-classes-within-one-rule*/
      
-     .t-social .fa {
-       font-size: 26px !important;
-       margin: 0 2px;
-       color: #232b2b;}
-
+ 
        
 
   div.list-grid img, div.list-grid a, div.list-grid * {
