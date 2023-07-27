@@ -1,0 +1,3 @@
+<h1>Just a note about sources</h1>
+<p>All of the work on this project is my own. I used bard AI to generate the templates that I can use and mix and match, so, instead of using Lorem Ipsum, using somewhat real content, and, then, I tweaked the AI's voice so that it sounded less robotic.</p>
+<p>I am not a pet owner, but, I do know people who have liked pets, and, I know how passionate they are. So, I am basing the information in this project solely on that. As I said before, the only real help that I am getting with AI, is with the Whispersync tool through AWS, and, even then, I don't get that much help from it with regular javascript.</p>

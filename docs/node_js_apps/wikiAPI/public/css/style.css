@@ -1,0 +1,36 @@
+
+    
+body{
+    background-image: url("https://images.unsplash.com/photo-1601662528567-526cd06f6582?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=830&q=80") !important; 
+    background-size: cover !important; 
+    font-size: 1.5rem; 
+    line-height: 2; 
+}
+
+nav ul {
+    display: flex; 
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style-type: none; 
+}
+
+
+section.footer{
+    background-image: url("https://unsplash.com/photos/Y8K6UFMnKt8"); 
+    background-size: cover;
+}
+
+nav ul li a {
+    text-decoration: none; 
+}
+
+.active {
+    color: red; 
+    text-decoration: underline; 
+}
+
+.active:focus{
+    color: purple;
+}

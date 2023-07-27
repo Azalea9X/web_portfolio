@@ -1,0 +1,39 @@
+<%- include("header") -%>
+
+    <body>
+        <h1>
+            <%=listTitle%>
+        </h1>
+
+        <form action="/" method="post">
+            <label for="food">Food
+                <input type="text" autocomplete="off" name="food" id="food"><br>
+                <label for="food">Drink
+                    <input type="text" autocomplete="off" name="drink" id="drink"><br>
+                </label>
+                <input type="submit" name="list" value="<%=listTitle%>">
+                <br>
+                <input type="reset">
+        </form>
+        <section class="section1">
+            <ul>
+                <li>
+                    Item 1
+                </li>
+                <li>
+                    Item 2
+                </li>
+                <li>
+                    Item 3
+                </li>
+
+                <%for (i=0; i < newLI.length; i++){%>
+                    <li>
+                        <%=newLI[i] %>
+                    </li>
+                    <%}%>
+
+                        <%- include("footer") -%>
+    </body>
+
+    </html>

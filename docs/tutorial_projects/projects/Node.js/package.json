@@ -1,0 +1,25 @@
+{
+  "name": "calculator1",
+  "version": "1.0.0",
+  "description": "My new web app",
+  "main": "calculator1.js",
+  "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.74",
+    "body-parser": "^1.19.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "superagent": "^7.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Jacob Siegel",
+  "license": "ISC"
+}

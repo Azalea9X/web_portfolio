@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Articles</title>
+</head>
+<body>
+    hhhhhh
+  <h1>List of Articles</h1>
+  <ul>
+    <% articles.forEach(function(article) { %>
+      <li><%= article.title %> - <%= article.author %></li>
+    <% }); %>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,153 @@
+.switch {
+    min-width: 80px; min-height: 40px; background-color: rgb(39, 38, 38); border-radius: 20px; max-width: 80px;
+}
+
+.flicker{
+    width: 30px; height: 30px; border-radius: 15px; background-color: rgb(202, 207, 201);
+ }
+ 
+
+[class^="bg-[#5"]{
+    transition: all .25s;
+}
+
+[class^="bg-[#000]"] .flicker:not(.moon) {
+transform: translateX(20px); 
+transition: .4s;
+
+}
+.moon {
+   width: 20px; height: 20px; max-width:20px; border-radius: 10px; box-shadow: 4px 4px 0 0 rgb(255, 255, 255); transform: translateX(40px); position: absolute;
+}
+
+body {
+    transition: all .2s;
+}
+
+header{
+    display: flex; 
+    justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family:'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 70px; 
+    line-height: 70px;font-weight: 300;
+    font-family: roboto;
+}
+p, a, li, ul, ol {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.square {
+    width: 98%; margin: 1%; 
+    height: 350px; 
+    background-color: rgb(236, 221, 200); 
+    text-align: center;
+}
+
+.square h2 {
+    margin: 50px 0px 10px 0; 
+}
+
+p{margin: 0px 0 10px 0; font-size: 1.5rem;}
+
+ a{
+    color: rgb(162, 0, 255); font-size: 20px; text-decoration: none; font-weight: 100;
+ }
+
+ a:hover {
+    color:rgb(116, 65, 235);
+ }
+
+ a:visited{
+    color:red;
+ }
+
+ a:active{color:green;}
+@media only screen and (max-width: 900px), (-webkit-min-device-pixel-ratio: 1.5) {
+   
+}
+
+.hero-image{
+    position: relative; left: 25%; 
+    min-width: 50%; max-width: 50%; 
+    height: 350px; background-color:azure;
+}
+
+.cube#html {
+
+    background-image: url("./../public/img/html-square.png");
+    background-size:contain;
+    background-color:blanchedalmond;
+    box-shadow: 10px 10px 20px brown;
+    }
+    
+    #html::before {
+        background-color:aquamarine;
+        
+    }
+
+    #html::after{
+        background-color:green;
+    }
+
+    #javascript:before{
+        background-color:rgb(162, 0, 255);
+    }
+
+    #javascript:after{
+        background-color:blueviolet;
+    }
+
+    #tailwind:before{
+        background-color:crimson;
+    }
+
+    #tailwind:after{
+        background-color:brown;
+    }
+
+    #css:before{
+      
+  background-color:rgb(248, 238, 222);}
+
+#css:after{      background-color:rgb(248, 238, 222);
+    }
+    .cube#javascript{
+        
+        position: relative;
+        background-image: url("./../public/img/javascript-square.png"); 
+        background-size: contain;    box-shadow: 10px 10px 20px brown;
+         
+    }
+    
+    .cube#tailwind{
+        position: relative;
+       
+        background-image: url("./../public/img/tailwind-css.svg"); 
+        background-size: contain;
+        box-shadow: 10px 10px 20px brown;
+    }
+    
+    .cube#css{
+        position: relative;
+
+        background-image: url("./../public/img/css-square.png"); 
+    background-size: contain;
+    
+    box-shadow: 10px 10px 20px brown;
+    }
+
+html {
+    font-size: 16px !important;
+}
+
+small{
+    font-size: 10px !important;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+

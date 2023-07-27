@@ -1,0 +1,36 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+#About_us{
+    line-height: 1.5; 
+    font-size: 16px; 
+    font-family:'Times New Roman', Times, serif;
+
+}
+h1{
+    font-size: 3rem;
+    margin-bottom: 1rem; color: red;
+}
+
+h2{
+    font-size: 2rem; color: purple;
+}
+h3{
+    font-size: 1.75rem; color: blue;
+}
+
+p{
+    font-weight: normal;
+}
+.current{
+    color: red;
+}
+.btn{
+    border-radius: 25px; 
+    color:aqua;
+    background-color: white;
+}
+}

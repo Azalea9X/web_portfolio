@@ -1,0 +1,39 @@
+/*Useful functions for reuse later*/
+
+/*<ModelName>.find({}, (err, posts) => {
+		if (posts.length === 0) {
+			posts1.insertMany(posts, (err) => {
+			if (err){
+				console.log(err);
+			}
+else{
+
+}
+		
+			}); 
+			res.redirect('/'); 
+		}
+		else {
+			res.render('home', {posts: posts});
+		}
+	})*/
+
+	/*const checkedBoxID = req.body.checkbox; 
+posts1.findByIdAndRemove(checkedBoxID, (err) => {
+	if (err){
+		console.log(err);
+	}
+	else{
+		console.log("Success");
+	}
+}
+);
+res.redirect('/');
+});
+
+app.post("/compose", parsing, (req, res) => {
+
+res.redirect('/');
+
+*/
+

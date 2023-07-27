@@ -1,0 +1,26 @@
+{
+  "name": "tailwindcss-children",
+  "version": "2.1.0",
+  "description": "Tailwind CSS plugin to add variants that target child elements",
+  "author": "Benoît Rouleau <benoit.rouleau@icloud.com>",
+  "license": "ISC",
+  "repository": "https://github.com/benface/tailwindcss-children.git",
+  "bugs": "https://github.com/benface/tailwindcss-children/issues",
+  "homepage": "https://github.com/benface/tailwindcss-children",
+  "scripts": {
+    "test": "jest",
+    "release": "f(){ release-it $1 && github-release-from-changelog ;};f"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "postcss-selector-parser": "^6.0.2"
+  },
+  "devDependencies": {
+    "github-release-from-changelog": "^2.1.1",
+    "jest": "^26.0.1",
+    "jest-matcher-css": "^1.1.0",
+    "postcss": "^7.0.29",
+    "release-it": "^13.5.8",
+    "tailwindcss": "^1.4.6"
+  }
+}

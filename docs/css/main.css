@@ -1,0 +1,30 @@
+header{
+    background-image: url("./../img/unsplash/backgrounds/dave-hoefler_waves-unsplash.jpg") !important;
+    box-sizing: content-box; 
+    background-cover: contain;
+    width: 100%;
+    margin: 0; 
+    padding: 0;
+    font-size: 16px; 
+}
+
+
+
+h1{
+margin: 0 auto !important;}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Itim', cursive;
+    color: blue !important; 
+    
+}
+
+p, blockquote, cite {
+    
+}
+
+header p {
+    color: white; 
+}
+
+     
