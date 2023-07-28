@@ -13,7 +13,7 @@ display: none;min-width: 80% !important; max-width: 90%; position: relative; lef
 
      
     .square{
-       max-height: 550px !important; min-width: 105%; max-width: 350px; margin: 1%; position: relative; left: -15% !important; top: 5% !important;
+       max-height: 550px !important; min-width: 105%; max-width: 350px; margin: 1%; position: relative; left: -15% !important; top: 5% !important; margin-bottom: 20px !important;
       }
 
     .square:last-of-type{
