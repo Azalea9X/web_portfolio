@@ -13,7 +13,7 @@ display: none;min-width: 80% !important; max-width: 90%; position: relative; lef
 
      
     .square{
-        min-width: 65%; max-width: 350px; margin: 1%; position: relative; left: -15% !important; top: 5% !important;
+        min-width: 98%; max-width: 350px; margin: 1%; position: relative; left: -15% !important; top: 5% !important;
       }
 
       
@@ -47,7 +47,7 @@ display: none;min-width: 80% !important; max-width: 90%; position: relative; lef
     }
     
     small{
-        top:2.5vh; left: -50vw !important;
+        font-weight: bold;top:4.5vh; left: -51vw !important;
     }
 
     h2.notice {
@@ -73,7 +73,7 @@ display: none;min-width: 80% !important; max-width: 90%; position: relative; lef
        min-width: 48%; max-width: 48%; margin: 1%; 
      }
     
-    * { display: none;}
+     
      section.subsection { 
         display: flex; flex-wrap: wrap;
      }
@@ -110,7 +110,7 @@ min-width: 90vw !important; max-width: 95vw !important; position: relative; top:
     }
     
     #css {
-        left: 62vw; top: 10%;
+        left: 63%; top: 10%;
     }
     
     #html{
@@ -118,7 +118,7 @@ min-width: 90vw !important; max-width: 95vw !important; position: relative; top:
             }
     
     #javascript{
-        left: 62%; top: -10%;
+        left: 62%; top: -5%;
     }
 
     .switch{
@@ -170,22 +170,22 @@ min-width: 95% !important; max-width: 100vw; position: relative; left: -30px;
     
     .square:nth-child(1)  h2{
         margin-left: -15vw;
-        font-size: 150%; 
+        font-size: 200%; 
     }
     
         .square:nth-child(2) h2{
-margin-left: -35vw;   font-size: 150%;         
+margin-left: -20vw;   font-size: 200%;         
 
     }
     
         .square:nth-child(3) h2 {
-            margin-left: -15vw; font-size: 150%;
+            margin-left: -10vw; font-size: 200%; max-width: 500px;
 
     }
     
         .square:nth-child(4) h2 {
-margin-left: -35vw;
-font-size: 150%;  }
+margin-left: -25vw;
+font-size: 200%;  }
 
     footer{
         min-width: 80% !important; max-width: 390px;
@@ -231,10 +231,11 @@ position: relative !important; left: -148% !important;
 
 @media screen and (min-width: 1301px) and (max-width: 1600px) and (orientation:portrait), (-webkit-min-device-width: 1.5), (-webkit-browser-name:chrome), (-webkit-browser-name:firefox), (-webkit-browser-name: edge) {
     .main {
-        min-width: 98vw !important; max-width: 100vw !important;
-        left: .5vw;
+        min-width: 100% !important; max-width: 105vw !important;
+        left: -8%;
     }
-    .square{
+    
+.square{
         min-width: 48%; max-width: 48%; margin: 1%;  
       }
       section.subsection { 
@@ -352,6 +353,8 @@ min-width: 95% !important; max-width: 100vw; position: relative; left: -30px;
     h2:nth-of-type(1) {
         position: relative; left: 3.5rem !important;
     }
+        .first{
+position: relative !important; left: 10% !important;    }    
 }
 
 @media screen and (orientation: portrait) {
@@ -369,3 +372,325 @@ Thanks to bard for helping with the user agent for media queries
     
     Testing testing testing testing one two three testing testing testing testing one two three testing testing tseting tseting one two three testing one two three testing testing tesing testing tesrting testing testing testing 
     */ 
+
+@media screen and (min-width: 301px) and (max-width: 600px) and (orientation:landscape), (-webkit-min-device-width: 1.5), (-webkit-browser-name:chrome), (-webkit-browser-name:firefox), (-webkit-browser-name: edge) {
+    .main {
+        min-width: 98vw !important; max-width: 103vw !important;
+        left: 1%;
+    }
+    .hero-image{
+display: none;min-width: 80% !important; max-width: 90%; position: relative; left: -95px;
+    }
+
+     
+    .square{
+        min-width: 102% !Important;
+ margin: 1%; position: relative; left: -15% !important; top: 5% !important;
+      }
+
+      
+   
+      section.subsection { 
+         display: flex; flex-direction:column; min-width: 98vw !important;
+         position: relative; top: -2rem !important; left: 5rem !important;
+      }
+ 
+
+
+    .main p {margin-bottom: 20px; 
+        min-width: 100vw !important; max-width: 100% !important; position: relative; left: 2% !important;
+    }
+
+    h1{position: relative !important; text-align: center !important; min-width: 3rem !important;  line-height: 1.2;   left: 0rem !important;}
+ 
+    H2{
+        margin-bottom: 15px; text-decoration: bold; font-weight: 900;
+    }
+    #tailwind {
+           left: 15% !important;
+    }
+    
+    #html{
+        left: 15% !important;
+            }
+
+    .switch{
+        position: relative !important; left: 15%; top: -35% !important;
+    }
+    
+    small{
+        top: 6.5vh; left: -52vw !important;
+    }
+
+    h2.notice {
+        display: none;
+    }
+    
+    .subsection{
+        position: relative; top: -15vh !important;;
+    }
+    
+    footer{
+        position: relative; top: -15vh;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) and (orientation:landscape), (-webkit-min-device-width: 1.5), (-webkit-browser-name:chrome), (-webkit-browser-name:firefox), (-webkit-browser-name: edge) {
+
+    .main {
+        max-width: 1000px;  
+        }
+     .square{
+       min-width: 48%; max-width: 48%; margin: 1%; 
+     }
+    
+      section.subsection { 
+        display: flex; flex-wrap: wrap;
+     }
+
+    .main {
+        min-width: 100vw !important; max-width: 100vw !important;
+        left: .1vw;
+    }
+    
+    article.main p {
+        position: relative; left: 6vw !important;
+    }
+    .hero-image{
+min-width: 99vw; max-width: 105vw; position: relative; left: 0px;
+    }
+
+
+    .subsection{
+        min-width: 80% !important; max-width: 90%;
+        min-width: 90%; max-width: 390px;
+    }
+
+    .main p {margin-bottom: 20px; 
+        min-width: 85vw !important; max-width: 390px !important; position: relative; left: 2% !important;
+    }
+
+
+    footer{
+min-width: 90vw !important; max-width: 95vw !important; position: relative; top: -5vh !important; 
+    }
+    
+    #tailwind {
+           left: 24% !important; top: -37.5%;
+    }
+    
+    #css {
+        left: 62vw; top: 10%;
+    }
+    
+    #html{
+        left: 22% !important; top: 40%;
+            }
+    
+    #javascript{
+        left: 62%; top: -10%;
+    }
+
+    .switch{
+        position: relative; left: 20vw !important;
+    }
+    
+    .subsection, footer 
+    {min-width: 98vw !important; max-with: 100vw !important; position: relative; left: 1vw;}
+    
+    a#skip {
+   position: relative; left: 5vw !important;
+    }
+    
+    h2.notice {
+        display: none;
+    }
+
+    h1 {
+       position: relative !important; left: 2rem !important;
+    }
+}
+
+
+@media screen and (min-width: 901px) and (max-width: 1200px) and (orientation:landscape), (-webkit-min-device-width: 1.5), (-webkit-browser-name:chrome), (-webkit-browser-name:firefox), (-webkit-browser-name: edge) {
+    .main {
+        min-width:30vw !important; max-width: 98vw !important;
+        
+    }
+
+    .square{
+        min-width: 48%; max-width: 48%; margin: 1%;  
+      }
+      section.subsection { 
+         display: flex; flex-wrap: wrap; margin: 1% 2% 1% 1% !important;
+      }
+ 
+     .main {
+         min-width: 98vw !important; max-width: 100vw !important;
+         left: .5vw;
+     }
+   
+    
+    
+    .hero-image{
+min-width: 95% !important; max-width: 100vw; position: relative; left: -30px;
+    }
+
+
+    
+    .square:nth-child(1)  h2{
+        margin-left: -15vw;
+        font-size: 150%; 
+    }
+    
+        .square:nth-child(2) h2{
+margin-left: -35vw;   font-size: 150%;         
+
+    }
+    
+        .square:nth-child(3) h2 {
+            margin-left: -15vw; font-size: 150%;
+
+    }
+    
+        .square:nth-child(4) h2 {
+margin-left: -35vw;
+font-size: 150%;  }
+
+    footer{
+        min-width: 80% !important; max-width: 390px;
+    }
+    
+    #tailwind {
+           left: 17% !important; top: -35.5%;
+    }
+    
+    #css {
+        left: 63%; top: 12%;
+    }
+    
+    #html{
+        left:16.5% !important; top: 40%;
+            }
+    
+    #javascript{
+        left: 63%; top: -8%;
+    }
+
+    .switch{
+        position: relative; left: 5VW !important;
+    }
+    
+    h2.notice {display: none;}
+    .subsection, footer 
+    {max-width: 1000px !important; min-width: 38% !important; max-height: 30%;}
+    
+    a#skip {
+   position: relative; left: -5vw !important;
+    }
+        h1{position: relative; min-width: 80vw !important; left: 7vw !important; line-height: 1.2; max-width: 200px !important;}
+    h2:nth-child(1) {position: relative; left: 10vw !important;}
+
+    .main p {font-size:1.3rem !important;  min-width: 600px !important; max-width: 800px !important; position: relative !important; left: 10vw !important;}
+
+    small {
+position: relative !important; left: -148% !important;
+    }
+
+}
+@media screen and (min-width: 1201px) and (max-width: 1600px) and (orientation:landscape), (-webkit-min-device-width: 1.5), (-webkit-browser-name:chrome), (-webkit-browser-name:firefox), (-webkit-browser-name: edge) {
+    .main {
+        min-width:30vw !important; max-width: 98vw !important;
+        
+    }
+
+    .square{
+        min-width: 48%; max-width: 48%;
+      }
+      section.subsection {  
+         display: flex; flex-wrap: wrap; margin: 1%  .2% -.2% !important;
+      margin-right: 1% !important; max-width: 75vw !important;}
+ 
+    
+     .main {
+         min-width: 98vw !important; max-width: 100vw !important;
+         left: .5vw;
+     }
+   
+    
+    
+    .hero-image{
+min-width: 95% !important; max-width: 100vw; position: relative; left: -30px;
+    }
+
+
+    
+    .square:nth-child(1)  h2{
+        margin-left: -15vw;
+        font-size: 150%; 
+    }
+    
+        .square:nth-child(2) h2{
+margin-left: -35vw;   font-size: 150%;         
+
+    }
+    
+        .square:nth-child(3) h2 {
+            margin-left: -15vw; font-size: 150%;
+
+    }
+    
+        .square:nth-child(4) h2 {
+margin-left: -35vw;
+font-size: 150%;  }
+
+    footer{
+        min-width: 80% !important; max-width: 390px;
+    }
+    
+    #tailwind {
+           left: 13% !important; top: -38.5%;
+    }
+    
+    #css {
+        left: 63%; top: 7%;
+    }
+    
+    #html{
+        left: 12.5% !important; top: 36%;
+            }
+    
+    #javascript{
+        left: 63%; top: -8%;
+    }
+
+    .switch{
+        position: relative; left: 5VW !important;
+    }
+    
+    h2.notice {display: none;}
+    .subsection, footer 
+    {max-width: 1000px !important; min-width: 38% !important; max-height: 30%;}
+    
+    a#skip {
+   position: relative; left: -5vw !important;
+    }
+        h1{position: relative; min-width: 80vw !important; left: 7vw !important; line-height: 1.2; max-width: 200px !important;}
+    h2:nth-child(1) {position: relative; left: 10vw !important;}
+
+    .main p {font-size:1.3rem !important;  min-width: 600px !important; max-width: 800px !important; position: relative !important; left: 10vw !important;}
+
+    small {
+position: relative !important; left: -148% !important;
+    }
+
+}
+
+@media screen and (orientation: landscape) {
+    .first{
+transform: translateX(5vw) !important;
+    }
+    .second {
+        transform: translateX(10vw) !important;
+    }
+}
