@@ -1,0 +1,227 @@
+A longer list of type checks include: PropTypes.array, PropTypes.object, 
+PropTypes.bool, PropTypes.func, PropTypes.number, PropTypes.string, 
+PropTypes.symbol You can add .isRequired to the end of the PropTypes as 
+well if you want to. If you add the .isRequired attribute to the end of 
+the proptypes it will give you a warning that it is required. If you're 
+doing a conditional statement where the Proptypes is a status, you could 
+make itt use the PropTypes.oneOf(["Open", "Closed"]) <h4>Flow</h4> A 
+typechecking library that's used and maintained by FB Open Source. Flow 
+will check to make sure that the value is its most correct type. Create 
+React Type assumes that you don't want to use flow and doesn't put it in 
+the library, but, let's put it. It's smooth to incorporate. All you need 
+to do to use flow is add //@flow to the top of any files that you need 
+to typecheck. Flow will automatically only check these files. You can 
+also add the VSCode extension for Flow. If you have Prettier or a 
+linting tool setup, it'l help your editor understand the different 
+syntax. If you type document.getElementByID("root") it could return 
+null, so, what you should do is wrap it with an if statement to check if 
+(root !== null) and put it in the variable root.
+
+You can also add a typecheck to the root constant using Flow syntax.
+
+We willa lso adjust the component and property definitions: type Props = 
+{ item: string, cost: number}; function App(props: Props) { return 
+(<h1>{props.item}</h1><p>Cost: {cost.item}</p>)
+}
+
+
+
+If we removed the cost value, we will get an error. If cost is not a 
+required value, we can make it optional. We can make it potional by 
+adding a cost?: to the Props type.
+
+Using Typescript Blah. I am not doing typescript for now. I will, 
+however, look at Typescript later.
+
+Test-Driven Development The practice of letting tests drive the 
+development process. You should: write the tests first. You declare what 
+you're going to build and what you want to use in a first: 
+red>green>gold are the steps. Run the tests and watch them fail (red) 
+Run the tests and watch them fail before you write code. Write the 
+minimal amoutn of code required to make the test pass (green): focus 
+specifically on making the tests pass, and do not add more functionality 
+that you do not need. Refactor both the code and the tests (gold): Once 
+they pass, you should look at your tests and try to be elegant and 
+beautiful with thetests. Very helpful with React hooks. It's easier to 
+thikn about how a hook should work, before you write it. TDD would let 
+oyu certify the data structure for a feature or application independent 
+of the UI.
+
+TDD and Learning You may find it challenging to write a test before 
+writing code, that's okay when you're getting the hang ofi t. Try with 
+small bathces of it, a few tests, etc, when you get more of the hang of 
+it, it gets easier.
+
+We'l pretend that our code does not exist so we can get a feel for the 
+TDD workflow. Note: I will be using pre-existing code that I have in the 
+Tutorial section of my computer. One test you can do to see if you have 
+an element within another element is to write a test such as: 
+ReactDOM.render(<Star />, div); 
+expect(div.querySelector("svg")).toBeTruthy();
+
+This will tell if we have an svg element within the div element, we can 
+change the selector to find something fake and see the test fail. 
+div.querySelector("fake news").toBeTruthy();
+
+A few packages from @testling-library were installed to the REact 
+project. React Testing Lbirary is a porject that was started by Kent C. 
+Dodds, and, is important to enforce good testing practices and expand on 
+testing utilities that were part of the React ecosystem (from the book).
+
+Testing library is a term used for many packages such as Vue, Svelte, 
+Reason, Angular, and others. Not just React. You may want to use React 
+Testing Library to get better error messages when a test fails.
+
+Normally, the error message that we received is none. Let's start by 
+importing the toHaveAttribute in the @testing-library/jest-dom at the 
+beginning.
+
+After we've incorporated the jest-dom testing library, we can use 
+expect.extend({tohaveAttribute});
+
+I.e- header.toHaveAttribute("id", "hello");
+
+To extend and use one of the custom matchers, you would need to import 
+and use:
+
+import {toHaveAttribute, toHaveClass} from @testing-library/jest-dom";. 
+expect.extend({tohaveAttribute, toHaveClass});
+
+An even faster wya to do this is if you find yourself importing too many 
+matchers, you can import the extend-expect library:
+
+import "@testing-library/jest-dom/extend-expect"
+//Remove this --> expect.extend({toHaveAttribute, toHaveClass});
+
+This assertion will work as expected. Another neat thing to know about 
+the CRA is that in a file called setupTests.js, that comes with the CRA, 
+there is a line that comes iwth the extend-expect functionality already.
+
+If you're using the CRA, you don't need to include the import in the 
+test files.
+
+QUERIES Another feature of the React Testing Library that lets you match 
+with certain criteria. We shall adjust the STar component to have a 
+title that will let us write a common style of test- that matches based 
+on the text. First, render will replace our need to use 
+ReacDOM.render(), so, the test will look differnetly. Start by importing 
+render from React Testing Library. You use getByText to find the first 
+matching node for a query and throw it if no elements match, to get a 
+list of all the matching notes, you use getAllby instead.
+
+Okay. I got it. Essentially, it works. I will need to copy and paste the 
+solution that I have into this file later.
+
+TESTING EVENTS I am just going to be following along for this given that 
+I do not have an example to work with...
+
+using the checkbox component we created in chatper 7:
+
+export function Checkbox() { const [checked, setChecked] = useReducer( 
+checked => !checked, false);
+
+return( <> <label> {checked ? "checked" : "not checked"} <input 
+type="checkbox" value={checked} onChange={setChecked} /> </label> </> );
+}
+This uses useReducer to toggle a checkbox. Our aim is to make an 
+automated test that when we click on the checkbox and change the value 
+of false to true, it will test and also fire useReducer against the 
+hook. First thing- selec tthe element we want to fire on. When the 
+component fires, its label teext is not checked, we can use a regular 
+expression to match the string.
+
+import React from "react"; import {Checkbox} from "./Checkbox"; import 
+{render, fireEvent} from "@testing-library/react";
+
+test("Selecting the checkbox", () => { const {getByLabelText} = 
+render(<Checkbox />); const checkbox = getByLabelText(/not checked/i) 
+fireEvent.click(checkbox); expect(checkbox.checked).toEqual(true);
+});
+
+You could also toggle the reverse to see if the property is set to false 
+on toggle, we will change the name of the test to be more accurate. 
+Then, you just write false when you click it again. Testing library 
+gives you a method to check any element in the DOM- getByTestId const 
+checkbox = getByTestId(Checkbox) will do the same thing of finding an 
+item, useful for when DOM elements are otherwise more challenging to 
+access.
+
+USING CODE COVERAGE How many lines of codes are tested, is a metric that 
+helps you decide when you have done enough tests. Jest ships with 
+Istanbul, which is a tool that will review your tests and make a report 
+stating how many statements, branches, functions, and lines have been 
+covered.
+
+Simply add the npm test -- --coverage command to run jest with code 
+coverage. Jest makes a report that you can view in your browser, you'll 
+see the covergae folder is added to the root.
+
+The report will drill into folders and subfolders.
+
+Code coverage is a good way to measure the reach of your tests, to see 
+if you've written enough tests. 100% is not attainable most of the time, 
+so, Eve recommends to shoot for, maybe, 85%.
+
+Even if you don't test every single code that you have, you should start 
+to think about testing rpactices to help you save time and moeny when 
+building production-ready applications.
+
+##React Router
+In a singular paged app, all of this becomes problematic. Different from Angular, Ember, or Backbone, React doesn't come with a standard router. Engineers Michael Jackson and Ryan Florence created one named React Router. Used by Uber, Zendesk, Paypal and Vimeo. 
+
+###Incorporating the Router
+Let's build a classic website complete with an About, Events, Products and Conact Us page. The router will let us set up routes for each section of the website. A route is an endpoint that can be entered in the location's bar. Once requested, we can render the appropriate content. 
+
+<Routes>
+  <Route path="/" element={<Home />} /> 
+  <Route path="/events" element={<Events />} /> 
+  <Route path="/about" element={<About />} />
+   <Route path="/products" element={<Products />} />
+   <Route path="/contacts" element={<Contacts />} />
+   
+</Routes>
+
+These routes tell teh router the omponents to render when the window's location changse. The route component has a path and element properties, when the location matches the path, the element will be displayed. 
+
+The react-router-dom gives us a link component that we can create browser links with. Let's modify the home page to create a navigation menu. Okay. 
+
+Whoo. This took a while to get it to work, but, I managed to get it to work after following the instruction from the book. Still not sure what got it to work though. 
+
+Let's create a navbar, using the import {link} from "react-router-dom" element. 
+
+###Router Properties
+The React Router passes properties to the compnents. Let's use the current location to create a 404. We'll make a new component. With the 404 page we customized, we now will not see the results for pages that we do not get a result for. 
+You can use the value of location.pathname to see the route that's being visited. 
+
+let location=useLocation(); 
+        {console.log(location)}
+
+All of the route needs to be wrapped in the routes component. These are the basics, but, the basics can get you far. 
+
+####Nesting Routes
+Route components are used with the content that should be displayed only when URls match. Sometimes, we want some of the UI to stay in place. Let's consider the website. We may want to make sample pages that will display additional content. 
+
+Home page> About the company> Company default, history, services, << << << Events | Products | Contact us << 404 error page
+
+The new routes that we need will reflect this hierarchy: localhost:3000/about, localhost:3000/about/history, localhost:3000/services, localhost:3000/about/location, localhost:3000/events, localhost:3000/products, localhost:3000/contact, localhost:3000/hot-potato. 
+
+I still don't really understand nesting, so, I cheat a little with the pathway. It's still nesting. To get the content to display that's neste, you would use the outlet component, it will help us render the nested components. 
+
+import {Link, useLocation, Outlet} from "react-router-dom"; 
+
+The locationw ill tell the app which subsection to render. 
+
+###Using Redirects
+Redirect lets us redirect the user to a specific route. Users will try to access content by accessing old routes, the redirect component lets us give the users a way for directing them to the new content. 
+
+Essentially, you're using <Redirect from=uri to=uri> and it goes in the routes. Super cool and very neat. 
+
+Eve says it's possible to use the hook useRoutes to configure your application's routing. If we wanted to refactor our application to use useRoutes, we will make adjustments in the App component (or where the routes are set up). 
+
+Note: useRoutes is completely optional and I personally hate it, it looks really annoying. I need to see other examples in the wild of how it looks. 
+
+
+####Routing Parameters
+One useful feature of the React Router is the ability to implement set up routing parameters. Routing parameters are variables that obtain values from the URL. 
+They're very helpful with data driven web dev, for filtering content, or managing display preferences. 
+Let's say when the user selects a color by clicking it, the app should display the title and value. Using the router, we can obtain the color ID via the URL. 
