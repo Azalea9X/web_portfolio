@@ -225,3 +225,20 @@ Note: useRoutes is completely optional and I personally hate it, it looks really
 One useful feature of the React Router is the ability to implement set up routing parameters. Routing parameters are variables that obtain values from the URL. 
 They're very helpful with data driven web dev, for filtering content, or managing display preferences. 
 Let's say when the user selects a color by clicking it, the app should display the title and value. Using the router, we can obtain the color ID via the URL. 
+
+The ID for lawn is being passed in the URl. Let's go to the index.js file and wrap the compnent. 
+
+Then add the App, this application will have two routes: the ColorList and the ColorDetails. We haven't built ColorDetails but let's incorporate it. The ColorDetails component will display dynamically based on the ID of the component. How do we know if these are working? Easiest way is to check the React Developer tools and find the ID of the colors that is being renderd. If you don't have one, look at its ID, then, when you have the ID, you can append that to the localhost:3000. We will use the useParams hook import {useParams} from "react-router-dom" 
+
+In the ColorDetails function we would make a let {id} = useParams(); 
+let Colors = use Colors(); 
+let foundColors = colors.find(color => color.id === id); 
+console.log(foundColor); 
+foundColors will show us we have the correct color, now, we just need to display the data of the color in the component using {foundColor.title} or {foundColor.color}
+We also want the ability to navigate to the ColorDetails page by clicking on the color in the list. We're going to use a different hook now called useNavigate. 
+import {useNavigate} from "react-router-dom". Then, we will use useNavigate which wlil return a function that will let us go to another page. 
+
+let navigate = useNavigate(); We will make it so the onClick={() => navigate(`/${id`)}
+Then, when we click on that section, we will be routed to the correct page. If you wanted to, users can send other users to the specific color or all the colors sorted by a specific field. 
+
+In thsi chapter, we have learned the basic usage of the React Router. Next up, is the React server. 
