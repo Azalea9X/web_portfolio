@@ -6,6 +6,7 @@
     "express": "^4.18.2",
     "inquirer": "^9.2.7",
     "parcel-bundler": "^1.5.1",
+    "react-router-dom": "^6.15.0",
     "serve": "^14.2.0",
     "tailwindcss-children": "^2.1.0"
   },
