@@ -1,0 +1,77 @@
+{
+  "contacts": [
+    {
+      "firstName": "John",
+      "lastName": "Smith",
+      "age": 35,
+      "city": "New York",
+      "email": "john.smith@example.com",
+      "gender": "male",
+      "pronouns": "he/him"
+    },
+    {
+      "firstName": "Jane",
+      "lastName": "Johnson",
+      "age": 28,
+      "city": "Los Angeles",
+      "email": "jane.johnson@example.com",
+      "gender": "female",
+      "pronouns": "she/her"
+    },
+    {
+      "firstName": "Michael",
+      "lastName": "Williams",
+      "age": 42,
+      "city": "Chicago",
+      "email": "michael.williams@example.com",
+      "gender": "male",
+      "pronouns": "he/him"
+    },
+    {
+      "firstName": "Emily",
+      "lastName": "Brown",
+      "age": 25,
+      "city": "Houston",
+      "email": "emily.brown@example.com",
+      "gender": "female",
+      "pronouns": "she/her"
+    },
+    {
+      "firstName": "David",
+      "lastName": "Jones",
+      "age": 31,
+      "city": "Phoenix",
+      "email": "david.jones@example.com",
+      "gender": "male",
+      "pronouns": "he/him"
+    },
+    {
+      "firstName": "Sarah",
+      "lastName": "Miller",
+      "age": 27,
+      "city": "Philadelphia",
+      "email": "sarah.miller@example.com",
+      "gender": "female",
+      "pronouns": "she/her"
+    },
+    {
+      "firstName": "William",
+      "lastName": "Davis",
+      "age": 45,
+      "city": "San Antonio",
+      "email": "william.davis@example.com",
+      "gender": "male",
+      "pronouns": "he/him"
+    },
+    {
+      "firstName": "Mary",
+      "lastName": "Garcia",
+      "age": 33,
+      "city": "San Diego",
+      "email": "mary.garcia@example.com",
+      "gender": "female",
+      "pronouns": "she/her"
+    }
+  ]
+}
+
