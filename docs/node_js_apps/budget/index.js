@@ -1,64 +1,82 @@
-//Requiring the .dotEnv package with nodeJS
-require('dotenv').config({ override: true })
+const express = require("express");
+const path = require("path");
+const app = express();
+const bodyParser = require("body-parser"); // Removed deprecated usage
+const mysql = require("mysql2");
+const dotenv = require("dotenv");
+dotenv.config();
 
-let express=require("express");
-const path=require("path");
-const https=require("https");
-let eslint =require("eslint");
-let app=express();
-const request=require("request");
-const mailchimp=require("@mailchimp/mailchimp_marketing");
-app.set("view engine","ejs");
-let fs=require("fs");
-const ejsLint=require("ejs-lint");
-let text=[],arr1=[],posts=[],post="";
-const _=require("lodash"),bparser=require("body-parser");
-app.use(bparser.urlencoded({extended:!0}));
-  
-//jshint esversion:6
-const mongoose = require('mongoose'); 
-//https://stackoverflow.com/questions/30105823/mongoerror-auth-failed-mongoose-connection-string
+// Use express' built-in parsing middleware instead of body-parser
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-const db_url = "mongodb://127.0.0.1:27017";
-mongoose.connect(db_url,{ useNewUrlParser: true }, function (err) { 
-  if (err) throw err; console.log('Successfully connected'); });
-
-//https://mongoosejs.com/docs/connections.html
-
-
-
-const parser = require('body-parser');
- 
-
-
-const parsing = parser.urlencoded({ extended: true });
-
-//Per overflow 
-
-
-
-/*app.use(express.static(__dirname + '/public'));*/
-app.use(express.static(__dirname + '/public/'));
-
-
-app.get('/', (req, res) => {
-  res.set("Content-Type", "text/html");
-  res.write("<h2>Hello world!!!</h2>")
-
-})
-.get('/contact', (req, res) => {
-  res.set("Content-Type", "text/html");
-res.write("<h2>Hello!!!</h2>");  
-res.write("<p>Hello how are you doing? My name is Jacob Siegel. I am looking forward to meeting you on this journey. I am hoping to become a web-developer. It's nice to meet you.</p>");
-
+const pool = mysql.createPool({
+  host: process.env.host,
+  user: process.env.user,
+  password: process.env.password,
+  database: process.env.database,
+  port: process.env.port,
 });
 
+const {
+  getTotalPrice,
+  getTransaction,
+  updateItem,
+  getTransactionsByMonth,
+  addItem,
+} = require("./database.js");
 
-//I am going to be starting over from the beginning here. I think that I got it wrong and I also need to get the project up down. 
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, "public")));
 
+app.get("/", async (req, res) => {
+  const totalPrice = await getTotalPrice();
+  const december = await getTransactionsByMonth();
 
+  // Avoid redundant JSON.stringify, directly push objects
+  const data = december.map((transaction) => transaction);
 
-const PORT = 5000; 
-app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+  res.render("index", { transactions: { totalPrice, data } }); // Send data as an object
+});
 
-//Works
+app.get("/addItem", async (req, res) => {
+  res.render("addItems");
+  
+});
+
+app.post("/addItem", async (req, res) => {
+  const { date, transaction, company, price } = req.body;
+
+  try {
+    const item = await addItem(date, transaction, company, price);
+    res.status(201).json(item);
+  } catch (err) {
+    res.status(500).json({ error: err });
+  }
+});
+
+app.get("/item/:id", async (req, res) => {
+  const id = req.params.id;
+  res.render("updateFinance", { id: id }); 
+});
+
+app.patch("/item/:id", (req, res) => {
+  const { company, transaction, price, date } = req.body;
+  const id = req.params.id;
+
+  // Update contact table with pool query
+  pool.query(
+    "UPDATE myBudget SET company = ?, transaction = ?, price = ?, date = ? WHERE id = ?",
+    [company, transaction, price, new Date(date), id],
+    (error, result) => {
+      if (error) {
+        throw error;
+      }
+
+      // Handle success or perform further actions
+    }
+  );
+});
+
+app.listen(8080, () => console.log("Listening on port 8080"));
