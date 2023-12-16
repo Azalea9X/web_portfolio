@@ -4,6 +4,14 @@ const app = express();
 const bodyParser = require("body-parser"); // Removed deprecated usage
 const mysql = require("mysql2");
 const dotenv = require("dotenv");
+const cors = require("cors"); 
+
+app.use(
+  cors({
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, PATCH, DELETE",
+  })
+);
 dotenv.config();
 
 // Use express' built-in parsing middleware instead of body-parser
@@ -58,8 +66,11 @@ app.post("/addItem", async (req, res) => {
 
 app.get("/item/:id", async (req, res) => {
   const id = req.params.id;
-  res.render("updateFinance", { id: id }); 
+  // Fetch item 
+  
+  res.render("/updateFinance", {id: id});
 });
+
 
 app.patch("/item/:id", (req, res) => {
   const { company, transaction, price, date } = req.body;
@@ -79,4 +90,19 @@ app.patch("/item/:id", (req, res) => {
   );
 });
 
+app.delete("/item/:id", async (req, res) => {
+  const id = req.params.id;
+
+  pool.query(
+    "delete from myBudget where id = ?",
+    [id],
+    (error, Result) => {
+      if (error) {
+        throw error;
+      }
+    }
+  );
+
+ 
+});
 app.listen(8080, () => console.log("Listening on port 8080"));
