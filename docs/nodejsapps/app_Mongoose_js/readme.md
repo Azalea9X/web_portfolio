@@ -1,2 +1,0 @@
-<h1>Readme</h1>
-<p>This is an app that is supposed to be a test using mongoose. I demonstrate the way that mongoose and mongodb works by establishing a connection with a localhost, and, using nodemon as a dependency to test it. I then save a fruit to the local DB while running it. I received information from the Udemy bootcamp developer's in 2022 video series about how to use mongoose and nodejs. I am working on a Linux Ubuntu 22.04 machine, as, Linux is my preferred development platform.</p>
