@@ -11,7 +11,7 @@
 /**/**/**/**/node_modules
 /**/**/**/**/**/node_modules
 /**/**/**/**/**/**/node_modules
-/node_js_apps/wikiAPI
-/node_Js_apps/app_Mongoose_js
+/node_js_apps/wikiAPI/*
+/node_Js_apps/app_Mongoose_js/*
 /node_Js_apps/**/.git
-/node_Js_apps/budgetgit
+/node_Js_apps/budget/.git
