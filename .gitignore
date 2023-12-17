@@ -1,7 +1,4 @@
-/docs/node_Js_apps/app_Mongoose_js
-/docs/node_Js_apps/wikiAPI
-/docs/node_js_apps/**/node_modules
-/docs/node_js_apps/**/.env
-/docs/node_js_apps/**/**/.env
-/docs/node_js_apps/**/**/**.env
-/docs/node_js_apps/**/**/**.env
+/**/.env
+/**/**/.env
+/**/**/**/.env
+/docs/node_js_apps

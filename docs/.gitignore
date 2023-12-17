@@ -1,18 +1,4 @@
-/.env
-/**/.env
-/**/**/.env
-/**/**/**/**/.env
-/**/**/**/**/**/.env
-/**/**/**/**/**/**/.env
-/node_modules
-/**/node_modules
-/**/**/node_modules
-/**/**/**/node_modules
-/**/**/**/**/node_modules
-/**/**/**/**/**/node_modules
-/**/**/**/**/**/**/node_modules
-/node_js_apps/wikiAPI/*
-/node_Js_apps/app_Mongoose_js/
-/node_Js_apps/app_Mongoose_js/*
-/node_Js_apps/**/.git
-/node_Js_apps/budget/.git
+ /docs/nodejsapps/**/.env
+ /docs/nodejsapps/wikiAPI
+ /docs/nodejsapps/app_Mongoose_js
+ /docs/nodejsapps/**/node_modules
