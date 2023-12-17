@@ -1,4 +1,1 @@
-/docs/node_js_apps/app*
-/docs/node_js_apps/wikiAPI
-/docs/**/**/.env
-/docs/**/**/node_modules
+/docs/**/node*/*
