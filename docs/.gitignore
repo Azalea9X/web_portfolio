@@ -1,6 +1,6 @@
- ./docs/nodejsapps/**/.env
- ./docs/nodejsapps/wikiAPI
- ./docs/nodejsapps/app_Mongoose_js
- ./docs/nodejsapps/**/node_modules
- ./docs/nodejsapps/**/.git
+ docs/nodejsapps/**/.env
+ docs/nodejsapps/wikiAPI
+ docs/nodejsapps/app_Mongoose_js
+ docs/nodejsapps/**/node_modules
+docs/nodejsapps/**/.git
  
