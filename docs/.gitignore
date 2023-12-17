@@ -1,4 +1,4 @@
-/docs/**/app_Mongoose_js
-/docs/**/wikiAPI
+/docs/node_js_apps/app*
+/docs/node_js_apps/wikiAPI
 /docs/**/**/.env
 /docs/**/**/node_modules
