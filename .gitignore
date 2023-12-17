@@ -1,4 +1,6 @@
 /**/.env
 /**/**/.env
 /**/**/**/.env
-/docs/nodejsapps
+/docs/nodejsapps/wikiAPI
+/docs/nodejsapps/app_Mongoose_js
+/**/**/node_modules
