@@ -1,0 +1,3 @@
+Note that for this tutorial, I followed the advice of Sam Meech-Ward on youtube, with his video Mysql Node.js Express. I am retooling my tutorial to show finished products which will demonstrate my use of CRUD, node, express, React, and other tools. I am mainly using Bard or Bing AI for debugging when something doesn't make sense, I am doing most of the heavy lifting. My database of choice is SQL because it is the most easy to use. 
+
+In this example, you will create a notes app where you will add notes to the database using a title and content field. I auto generated some very basic CSS with bard AI because the point of this product is more for demonstrating the knowledge of databases. 

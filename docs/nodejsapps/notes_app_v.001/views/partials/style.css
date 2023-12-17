@@ -1,0 +1,90 @@
+/* Base styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Form styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Media queries for responsive form width */
+  @media (max-width: 599px) {
+    form {
+      width: 80%;
+    }
+  }
+  
+  @media (min-width: 600px) and (max-width: 899px) {
+    form {
+      width: 70%;
+    }
+  }
+  
+  @media (min-width: 900px) and (max-width: 1199px) {
+    form {
+      width: 65%;
+    }
+  }
+  
+  @media (min-width: 1200px) and (max-width: 1499px) {
+    form {
+      width: 60%;
+    }
+  }
+  
+  @media (min-width: 1500px) and (max-width: 1799px) {
+    form {
+      width: 55%;
+    }
+  }
+  
+  @media (min-width: 1800px) and (max-width: 2000px) {
+    form {
+      width: 50%;
+    }
+  }
+  
+  /* Text styles */
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  h3 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Custom classes */
+  .title {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+  
+  .content {
+    font-family: Times, 'Verdana', serif;
+    line-height: 1.5;
+    margin: 0 20% 0 20%;
+  }
+  
