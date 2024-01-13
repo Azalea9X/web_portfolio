@@ -1,5 +1,5 @@
 <%- include("./partials/header") -%>
-
+ 
     <body>
         <nav>
             <ul>
@@ -11,7 +11,9 @@
         </nav>
 
         <div class="form-group">
-            <form action="/item/<%=id%>" method="PATCH">
+            <form method="PATCH" action="item/2">
+
+
 
 
 
@@ -37,13 +39,42 @@
 
 
         </div>
-        <Input class="btn btn-primary" type="submit">
+        <input class="btn btn-primary" type="submit">
         </form>
 
 
         <section class="footer">
             <%- include("./partials/footer") -%>
         </section>
+
+        <script>
+            const form = document.querySelector('form');
+            
+            form.addEventListener('submit', e => {
+              e.preventDefault();
+         
+            
+              fetch(`/item/2`, { 
+                method: 'PATCH',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                  company: form.company.value,
+                  transaction: form.transaction.value,
+                  date: form.date.value, 
+                  price: form.price.value
+                })
+              })
+              .then(res => {
+                // response handling  
+              })
+              .catch(error => console.error(error));
+            });
+            </script>
+            
+            
+
     </body>
 
 

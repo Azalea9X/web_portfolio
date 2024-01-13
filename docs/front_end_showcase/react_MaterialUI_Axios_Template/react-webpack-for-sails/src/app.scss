@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+
+    h1 {
+        color: #7e6b52
+    }
+}
+
+.btnUpd {
+    
+    min-width: 50px; margin-right: 50px; 
+}
+
+.btnDel {
+    
+    min-width: 50px; margin-right: 50px;
+}
+
+.changeP {
+    background-color: green !important;
+    min-width: 100px; margin-right: 50px; 
+}
+ 
+label {
+ 
+}
+
+input:not(input[type="submit"]) {
+
+}
+
+.add :input{
+    border-radius: 5px;
+}
+
+.add{
+    min-width: 500px !important; 
+    background-color:bisque !important;
+}
+
+input[type="submit"]{
+    background-color: lightblue; color: black; font-weight: 900; width: 100px; height: 100px; border-radius: 10px;
+}
+
+.saveIcon, .delIcon{
+    position: relative; left: 0px; 
+    /*transform: scale(2.5) translateY(8px);*/
+}
+
+.MuiButtonBase-root{
+    /*transform: translateY(-3px) !important;*/
+}

@@ -6,6 +6,7 @@ const mysql = require("mysql2");
 const dotenv = require("dotenv");
 const cors = require("cors"); 
 
+
 app.use(
   cors({
     "Access-Control-Allow-Origin": "*",
@@ -16,7 +17,7 @@ dotenv.config();
 
 // Use express' built-in parsing middleware instead of body-parser
 app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+app.use(express.json()); a
 
 const pool = mysql.createPool({
   host: process.env.host,
@@ -63,22 +64,22 @@ app.post("/addItem", async (req, res) => {
     res.status(500).json({ error: err });
   }
 });
-
-app.get("/item/:id", async (req, res) => {
-  const id = req.params.id;
-  // Fetch item 
-  
-  res.render("/updateFinance", {id: id});
+app.get("/item/:id", (req, res, next) => {
+const id=req.params.id;
+ 
+res.render("updateFinance", { id:id });
+  next(); 
 });
 
 
-app.patch("/item/:id", (req, res) => {
-  const { company, transaction, price, date } = req.body;
-  const id = req.params.id;
+app.patch("/item/:id", async (req, res) => {
+  let id1 = req.params.id; 
 
+  const { company, transaction, price, date } = req.body;
+ 
   // Update contact table with pool query
   pool.query(
-    "UPDATE myBudget SET company = ?, transaction = ?, price = ?, date = ? WHERE id = ?",
+    `UPDATE myBudget SET company = ?, transaction = ?, price = ?, date = ? WHERE id = ${id.value}`,
     [company, transaction, price, new Date(date), id],
     (error, result) => {
       if (error) {
@@ -88,6 +89,8 @@ app.patch("/item/:id", (req, res) => {
       // Handle success or perform further actions
     }
   );
+  res.send();
+
 });
 
 app.delete("/item/:id", async (req, res) => {
